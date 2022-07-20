@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import Header from '../components/header/Header';
-import HeroSection from '../components/section/hero_section/HeroSection';
+import HeroSection from '../components/section/heroSection/HeroSection';
 
 const Home: NextPage = () => (
   <div>

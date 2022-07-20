@@ -1,24 +1,14 @@
 import { FunctionComponent } from 'react';
-import { useQuery } from '@tanstack/react-query';
 
-const Price: FunctionComponent = () => {
-  const { isLoading, error, data } = useQuery(
-    ['bitcoinData'],
-    async () => {
-      const { data } = await (
-        await fetch('https://api.coincap.io/v2/assets/bitcoin')).json();
-      return data;
-    },
-    {
-      refetchInterval: 10000,
-    },
-  );
+import useCurrentBitcoinPrice from '../../../queries/currentBitcoinPriceQuery';
+
+const CurrentBitcoinPrice: FunctionComponent = () => {
+  const { data, error, isLoading } = useCurrentBitcoinPrice();
 
   if (isLoading) {
     return (
       <div className='text-4xl'>
         Loading...
-        $
       </div>
     );
   }
@@ -43,4 +33,4 @@ const Price: FunctionComponent = () => {
   );
 };
 
-export default Price;
+export default CurrentBitcoinPrice;
