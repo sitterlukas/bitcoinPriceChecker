@@ -36,6 +36,7 @@ module.exports = {
     'consistent-return': 'off',
     'no-undef': 'off',
     'no-unused-vars': 'off',
+    'global-require': 'off',
     'prefer-destructuring': 'off',
     'react/no-array-index-key': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',

@@ -4,7 +4,7 @@ import {
 
 export default function Document() {
   return (
-    <Html>
+    <Html className='dark:bg-primary'>
       <Head>
         <link rel='icon' href='/favicon.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
@@ -12,7 +12,7 @@ export default function Document() {
         <link href='https://fonts.googleapis.com/css2?family=VT323&display=swap' rel='stylesheet' />
         <title>Bitcoin price</title>
       </Head>
-      <body>
+      <body className='dark:bg-primary bg-secondary dark:text-secondary text-primary'>
         <Main />
         <NextScript />
       </body>

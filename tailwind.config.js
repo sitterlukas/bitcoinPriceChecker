@@ -4,7 +4,9 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
+    typography: (theme) => ({}),
     extend: {
       colors: {
         secondary: '#f3f3f3',
@@ -17,5 +19,5 @@ module.exports = {
       display: ['group-hover'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
