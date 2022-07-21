@@ -1,13 +1,29 @@
-import { useQuery } from '@tanstack/react-query';
 import { FunctionComponent } from 'react';
 
-import CurrentBitcoinPrice from '../../utils/currentBitcoinPrice/CurrentBitcoinPrice';
+import CurrentBitcoinPrice from '../../price/currentBitcoinPrice/CurrentBitcoinPrice';
+import { CurrentBitcoinPriceProps } from '../../price/currentBitcoinPrice/currentBitcoinPriceTypes';
 
-const HeroSection: FunctionComponent = () => (
+const HeroSection: FunctionComponent<CurrentBitcoinPriceProps> = ({
+  currentBitcoinPriceData,
+  currentBitcoinPriceError,
+  currentBitcoinPriceIsLoading,
+  exchangeRatesData,
+  exchangeRatesError,
+  exchangeRatesIsLoading,
+  currentCurrency
+}) => (
   <div className='flex flex-col h-80 justify-center items-center mx-auto'>
     <h1 className='mb-4 text-6xl text-center'>Current Price</h1>
     <div className='flex flex-col text-center'>
-      <CurrentBitcoinPrice />
+      <CurrentBitcoinPrice
+        currentBitcoinPriceData={currentBitcoinPriceData}
+        currentBitcoinPriceError={currentBitcoinPriceError}
+        currentBitcoinPriceIsLoading={currentBitcoinPriceIsLoading}
+        exchangeRatesData={exchangeRatesData}
+        exchangeRatesError={exchangeRatesError}
+        exchangeRatesIsLoading={exchangeRatesIsLoading}
+        currentCurrency={currentCurrency}
+      />
     </div>
   </div>
 );
