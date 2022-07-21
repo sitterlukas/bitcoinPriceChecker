@@ -23,6 +23,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': 'off',
+    'eol-last': 'off',
     'no-useless-return': 'off',
     'react/jsx-filename-extension': 'off',
     'max-len': 'off',
