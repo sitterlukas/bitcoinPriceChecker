@@ -7,7 +7,7 @@ import { SelectPriceModalProps } from '../modal/priceSelectModal/selectPriceModa
 
 const Header:FunctionComponent<SelectPriceModalProps> = ({ currentCurrency, currencies, selectCurrency }) => (
   <div className='relative flex justify-center relative'>
-    <div className='my-6 text-4xl'>bitcoin price</div>
+    <div className='my-7 sm:my-6 text-2xl sm:text-4xl'>bitcoin price</div>
     <div className='absolute top-0 -translate-y-1 left-12 my-8 text-4xl'>
       <Switch />
     </div>

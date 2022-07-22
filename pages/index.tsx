@@ -6,6 +6,7 @@ import Header from '../components/header/Header';
 import HeroSection from '../components/section/heroSection/HeroSection';
 import useExchangeRates from '../queries/exchangeRatesQuery';
 import useCurrentBitcoinPrice from '../queries/currentBitcoinPriceQuery';
+import AboutSection from '../components/section/aboutSection/AboutSection';
 
 const Home: NextPage = () => {
   const [currentCurrency, setCurrentCurrency] = useState('USD');
@@ -18,8 +19,6 @@ const Home: NextPage = () => {
   const selectCurrency = (event: React.MouseEvent<HTMLSpanElement> & { currentTarget: { textContent: React.SetStateAction<string>; }; }) => {
     setCurrentCurrency(event.currentTarget.textContent);
   };
-
-  console.log(exchangeRatesData);
 
   return (
     <div>
@@ -39,6 +38,7 @@ const Home: NextPage = () => {
           exchangeRatesIsLoading={exchangeRatesIsLoading}
           currentCurrency={currentCurrency}
         />
+        <AboutSection />
       </main>
     </div>
   );

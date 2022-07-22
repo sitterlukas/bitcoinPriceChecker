@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 
 import { CurrentBitcoinPriceProps } from './currentBitcoinPriceTypes';
+import PriceChange from '../priceChange/PriceChange';
 
 const CurrentBitcoinPrice: FunctionComponent<CurrentBitcoinPriceProps> = ({
   currentBitcoinPriceData,
@@ -73,6 +74,7 @@ const CurrentBitcoinPrice: FunctionComponent<CurrentBitcoinPriceProps> = ({
       {price}
       {' '}
       {currentCurrencySymbol(currentCurrency)}
+      <PriceChange currentBitcoinPriceData={currentBitcoinPriceData} />
     </div>
   );
 };

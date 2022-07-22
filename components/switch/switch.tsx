@@ -7,8 +7,6 @@ const Switch = () => {
   const toggleSwitch = () => setIsOn(!isOn);
   const { theme, setTheme } = useTheme();
 
-  console.log(theme);
-
   const spring = {
     type: 'spring',
     stiffness: 700,

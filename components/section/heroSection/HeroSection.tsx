@@ -12,7 +12,7 @@ const HeroSection: FunctionComponent<CurrentBitcoinPriceProps> = ({
   exchangeRatesIsLoading,
   currentCurrency
 }) => (
-  <div className='flex flex-col h-80 justify-center items-center mx-auto'>
+  <div className='flex flex-col mt-20 h-52 justify-center items-center mx-auto'>
     <h1 className='mb-4 text-6xl text-center'>Current Price</h1>
     <div className='flex flex-col text-center'>
       <CurrentBitcoinPrice
