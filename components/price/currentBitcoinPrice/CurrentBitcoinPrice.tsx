@@ -70,7 +70,7 @@ const CurrentBitcoinPrice: FunctionComponent<CurrentBitcoinPriceProps> = ({
   const price = Math.round((parseFloat(priceUsd) * currentExchangeRate(currentCurrency) + Number.EPSILON) * 100) / 100;
 
   return (
-    <div className='text-4xl'>
+    <div className='text-4xl h-20'>
       {price}
       {' '}
       {currentCurrencySymbol(currentCurrency)}
