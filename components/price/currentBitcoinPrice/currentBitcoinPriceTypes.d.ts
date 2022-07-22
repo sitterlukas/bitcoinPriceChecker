@@ -1,6 +1,7 @@
 export type CurrentBitcoinPriceProps = {
     currentBitcoinPriceData: {
-        priceUsd: string
+        priceUsd: string,
+        changePercent24Hr: string
     },
     currentBitcoinPriceError: Error | unknown,
     currentBitcoinPriceIsLoading: boolean,
