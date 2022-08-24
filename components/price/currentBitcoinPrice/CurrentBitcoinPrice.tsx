@@ -39,6 +39,7 @@ const CurrentBitcoinPrice: FunctionComponent<CurrentBitcoinPriceProps> = ({
     }
     return '$';
   };
+
   if (currentBitcoinPriceIsLoading || exchangeRatesIsLoading) {
     return (
       <div className='text-4xl'>
