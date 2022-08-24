@@ -16,7 +16,7 @@ const CurrentBitcoinPrice: FunctionComponent<CurrentBitcoinPriceProps> = ({
   const { USD, EUR, CZK } = exchangeRatesData || {};
   const { priceUsd } = currentBitcoinPriceData || {};
 
-  const currentExchangeRate = (currentCurrency: string): number => {
+  const currentExchangeRate = (currentCurrency: string) => {
     switch (currentCurrency) {
       case 'USD':
         return USD;
